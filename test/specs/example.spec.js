@@ -1,15 +1,16 @@
-const loginPage = require('../../pages/login.page')
+const loginPage = require('../../pages/login.page');
+const assert = require('assert');
 
-describe('JDS - Login', () => {
+describe('automation practice - Login', () => {
     it('Login JDS page', () => {
-        browser.url('https://172.21.19.33/');
+        browser.url('http://automationpractice.com/index.php?controller=authentication&back=my-account');
         const dataUser = {
-            username: 'super', 
-            password: 'jds2*123'
+            username: 'notysimo@gmail.com', 
+            password: 'Control123'
         };
         loginPage.fillForm(dataUser);
-
         const title = browser.getTitle();
+        assert.equal(title, 'My account - My Store');
         console.log('Title is: ' + title);
     })
 })

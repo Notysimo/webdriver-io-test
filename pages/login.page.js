@@ -1,8 +1,8 @@
 function loginElements() {
     return {
-        username: function () { return $('#login-username-input') },
-        password: function () { return $('#login-password-input') },
-        submitButton: function () { return $('#login-ok-button') }
+        username: function () { return $('#email') },
+        password: function () { return $('#passwd') },
+        submitButton: function () { return $('#SubmitLogin') }
     }
 }
 
